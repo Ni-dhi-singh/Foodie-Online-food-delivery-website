@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Orders</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>All Orders</h2>
+
+  <input type="text" id="searchId" placeholder="Enter Order ID">
+  <button onclick="searchOrder()">Search</button>
+
+  <br><br>
+
+  <table id="ordersTable">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Payment</th>
+        <th>Total</th>
+        <th>Items</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/admin.js">
+
+    async function fetchOrders() {
+      const res = await fetch("http://localhost:5000/api/orders");
+      const orders = await res.json();
+
+      renderOrders(orders);
+    }
+
+    function renderOrders(orders) {
+      const tbody = document.querySelector("#ordersTable tbody");
+      tbody.innerHTML = "";
+
+      orders.forEach(order => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${order.name}</td>
+          <td>${order.address}</td>
+          <td>${order.paymentMethod}</td>
+          <td>₹${order.totalAmount}</td>
+          <td>
+            <ul>
+              ${order.cartItems.map(i => `<li>${i.name} × ${i.quantity}</li>`).join("")}
+            </ul>
+          </td>
+          <td>${new Date(order.createdAt).toLocaleString()}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    async function searchOrder() {
+      const id = document.getElementById("searchId").value.trim();
+      if (!id) return alert("Please enter an order ID");
+
+      try {
+        const res = await fetch(`http://localhost:5000/api/orders/${id}`);
+        if (!res.ok) {
+          return alert("Order not found");
+        }
+
+        const order = await res.json();
+        renderOrders([order]);
+      } catch (err) {
+        alert("Error fetching order");
+        console.error(err);
+      }
+    }
+
+    fetchOrders();
+  </script>
+</body>
+
+</html>

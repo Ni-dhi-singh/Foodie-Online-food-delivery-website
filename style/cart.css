@@ -1,0 +1,81 @@
+.cart-section {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem;
+  text-align: center;
+}
+
+.cart-item {
+  background-color: #222;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  border-radius: 10px;
+  color: #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.dot{
+  color: red;
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-item h4 {
+  margin-bottom: 0.3rem;
+}
+
+.cart-table {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #222;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.cart-table th, .cart-table td {
+  padding: 1rem;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.cart-table button {
+  background-color: #f04;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-size: 1rem;
+}
+
+.cart-table button:hover {
+  background-color: #c00;
+}
+
+#totalAmount {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+
+.checkout-btn {
+  padding: 12px 25px;
+  font-weight: bold; /* 👈 This makes it bold */
+  font-size: 16px;
+  background-color: #ff0044;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #cc0033;
+}
+

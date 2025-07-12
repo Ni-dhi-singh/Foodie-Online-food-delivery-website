@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style/checkout.css">
+  <style>
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <label>Name:</label>
+      <input type="text" id="name" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Address:</label>
+      <textarea id="address" required></textarea>
+
+      <label>Payment Method:</label>
+      <select id="paymentMethod" required>
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Card</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <script>
+    // Display total amount
+    window.addEventListener("DOMContentLoaded", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+      });
+
+      const totalDisplay = document.createElement("p");
+      totalDisplay.classList.add("total");
+      totalDisplay.innerHTML = `<strong>Total Payable: ₹${total}</strong>`;
+      document.querySelector(".checkout-container").appendChild(totalDisplay);
+    });
+
+    // Handle form submission
+    document.getElementById("checkoutForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.querySelector("input[type='email']").value;
+      const address = document.getElementById("address").value;
+      const paymentMethod = document.getElementById("paymentMethod").value;
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      if (cart.length === 0) {
+        alert("Cart is empty!");
+        return;
+      }
+
+      const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+      try {
+        const res = await fetch("http://localhost:5000/api/orders", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            address,
+            paymentMethod,
+            email, // ✅ email included
+            cartItems: cart,
+            totalAmount
+          }),
+        });
+
+        const data = await res.json();
+        alert("Order placed successfully! 🎉");
+
+        localStorage.removeItem("cart");
+        window.location.href = "success.html";
+      } catch (err) {
+        console.error("Error placing order:", err);
+        alert("Failed to place order");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🧭 Navbar -->
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Foodie <span id="dot">..</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html">Cart<span id="cart-count"><sup>(0)</sup></span></a></li>
+        <li><a href="login.html">Log in</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <!-- 🖼️ Hero Section with Image in HTML -->
+
+  <section class="hero">
+    <img src="images/hero-image1.jpg" alt="Delicious Food" class="hero-image">
+    <div class="hero-text-overlay">
+      <h1>Delicious Food <br> Delivered Fresh to You</h1>
+      <p>Your cravings, our responsibility!</p>
+      <a href="signup.html" class="btn">Sign Up</a>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <!--------------------------------- 🍔 Explore Menu Section ----------------------------------->
+
+
+
+
+<section class="menu-section" id="menu">
+  <h2>Our Popular Menu </h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <img src="images/pizza.jpeg" alt="Pizza" />
+      <h3>Cheese Burst Pizza</h3>
+      <p>₹199</p>
+      <button class="add-btn"onclick="addToCart('Cheese Burst Pizza', 199)">Add to Cart</button>
+
+    </div>
+
+    <div class="menu-item">
+      <img src="images/Momos.jpeg" alt="Momos" />
+      <h3>Momos</h3>
+      <p>₹120</p>
+      <button class="add-btn"onclick="addToCart('Momos', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/Hakka-noodles.jpeg" alt="Noodles" />
+      <h3>Veg Hakka Noodles</h3>
+      <p>₹150</p>
+      <button class="add-btn"onclick="addToCart('Veg Hakka Noodles', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/Burger.jpeg" alt="Burger" />
+      <h3>Zingy Burger</h3>
+      <p>₹99</p>
+      <button class="add-btn"onclick="addToCart('Burger', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/FRENCH FRIES.jpeg" alt="Fries" />
+      <h3>Crispy Fries</h3>
+      <p>₹80</p>
+      <button class="add-btn"onclick="addToCart('FRENCH FRIES', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/Deluxe-Thali.jpeg" alt="Thali" />
+      <h3>Deluxe Thali</h3>
+      <p>₹250</p>
+      <button class="add-btn"onclick="addToCart('Deluxe Thali', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/PavBhaji.jpeg" alt="Pav-bhaji" />
+      <h3>Pav Bhaji</h3>
+      <p>₹100</p>
+      <button class="add-btn"onclick="addToCart('Pav Bhaji', 199)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/CholeBhature.jpeg" alt="Chole-Bhature" />
+      <h3>Chole Bhature</h3>
+      <p>₹150</p>
+      <button class="add-btn"onclick="addToCart('Chole Bhature', 199)">Add to Cart</button>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <!---------------------------------Explore More----------------------------------->
+
+  <!-- 🌟 Explore More Section -->
+<section class="explore">
+  <h2>Why Choose Foodie..?</h2>
+  <div class="explore-cards">
+    <div class="card">
+      <h3>⚡ Fast Delivery</h3>
+      <p>Get your food delivered hot & fresh at your doorstep within minutes.</p>
+    </div>
+    <div class="card">
+      <h3>🥗 Fresh Ingredients</h3>
+      <p>We use handpicked, locally-sourced ingredients for every order.</p>
+    </div>
+    <div class="card">
+      <h3>📞 24/7 Support</h3>
+      <p>We’re here for you anytime, any day. Your hunger is our priority!</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- 🧾 Footer -->
+  <footer>
+    <p>&copy; 2025 Foodie. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/script.js">
+    fetch('http://localhost:5000/')
+        .then(res => res.text())
+        .then(data => console.log("Response from backend:", data));
+
+  </script>
+</body>
+</html>

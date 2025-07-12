@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Zingy Bites</title>
+  <link rel="stylesheet" href="style/signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-body"> <!-- using same style as login -->
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Create Account 📝</h2>
+      <p>Join Foodie<span id="dot">..</span> & start your foodie journey!</p>
+
+      <form class="login-form" onsubmit="return handleSignup(event)">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required />
+
+        <button type="submit" class="login-btn">Sign Up</button>
+
+        <p class="signup-link">Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  function toggleMenu(id) {
+    const allMenus = document.querySelectorAll('.category-items');
+    allMenus.forEach(menu => {
+      menu.style.display = (menu.id === id) ? 'flex' : 'none';
+    });
+  }
+
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existing = cart.find(item => item.name === name);
+    if (existing) existing.quantity += 1;
+    else cart.push({ name, price, quantity: 1 });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    alert("Account created successfully! 🎉");
+    window.location.href = "login.html";
+    return false;
+  }
+</script>
+
+
+</body>
+</html>

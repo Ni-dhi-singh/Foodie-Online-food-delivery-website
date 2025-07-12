@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Zingy Bites</title>
+  <link rel="stylesheet" href="style/menu.css">
+</head>
+<body>
+  <section class="horizontal-menu">
+    <h2>Explore Menu</h2>
+
+    
+
+    <!-- Category Row 1 -->
+    <div class="category-row">
+      <div class="category-card" onclick="toggleMenu('pizzaItems')">
+        <img src="images/menu-pizza.jpeg" alt="Pizza" />
+        <h3>Pizza</h3>
+      </div>
+
+    <div class="category-items" id="pizzaItems">
+      <div class="menu-item">
+        <img src="images/Farm house.jpeg" alt="Farm house">
+        <h4>Farm House</h4>
+        <p>₹199</p>
+        <button class="add-btn" onclick="addToCart('Cheese Burst Pizza', 199)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/Margerita.jpeg" alt="Margherita Pizza">
+        <h4>Margherita Pizza</h4>
+        <p>₹179</p>
+        <button class="add-btn" onclick="addToCart('Margherita Pizza', 179)">Add to Cart</button>
+      </div>
+    </div>
+
+
+<!----------------------------------momos ----------------------------------------------------------------->
+
+      <div class="category-card" onclick="toggleMenu('momosItems')">
+        <img src="images/Menu-momos.jpeg" alt="Momos" />
+        <h3>Momos</h3>
+      </div>
+
+      <div class="category-items" id="momosItems">
+         <div class="menu-item">
+            <img src="images/Veg-Steam-momos.jpeg" alt="Veg Steam Momos">
+            <h4>Veg Steam Momos</h4>
+            <p>₹99</p>
+            <button class="add-btn" onclick="addToCart('Veg Steam Momos', 99)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+           <img src="images/kurkure momos.jpeg" alt="Kurkure Momos">
+           <h4>Kurkure Momos</h4>
+           <p>₹129</p>
+           <button class="add-btn" onclick="addToCart('Chicken Fried Momos', 129)">Add to Cart</button>
+         </div>
+      </div>
+
+
+
+<!----------------------------------------Burger--------------------------------------------------------------->
+      <div class="category-card" onclick="toggleMenu('burgerItems')">
+        <img src="images/menu-burger.jpeg" alt="Burger" />
+        <h3>Burger</h3>
+      </div>
+    </div>
+
+    <div class="category-items" id="burgerItems">
+      <div class="menu-item">
+         <img src="images/veg-burger.jpeg" alt="Veg Burger">
+         <h4>Veg Zingy Burger</h4>
+         <p>₹89</p>
+         <button class="add-btn" onclick="addToCart('Veg Zingy Burger', 89)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+         <img src="images/burger-wooper.jpeg" alt="Chicken Whopper">
+         <h4>Chicken Whopper</h4>
+         <p>₹139</p>
+         <button class="add-btn" onclick="addToCart('Chicken Whopper', 139)">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- Category Row 2 -->
+    <div class="category-row">
+      <div class="category-card" onclick="toggleMenu('shakesItems')">
+        <img src="images/shakes.jpeg" alt="Shakes" />
+        <h3>Shakes</h3>
+      </div>
+
+
+      <div class="category-items" id="shakesItems">
+        <div class="menu-item">
+          <img src="images/chocolate-shake.jpeg" alt="Chocolate Shake">
+          <h4>Chocolate Shake</h4>
+          <p>₹99</p>
+          <button class="add-btn" onclick="addToCart('Chocolate Shake', 99)">Add to Cart</button>
+       </div>
+       <div class="menu-item">
+          <img src="images/Strawberry shake.jpeg" alt="Strawberry Shake">
+          <h4>Strawberry Shake</h4>
+          <p>₹109</p>
+          <button class="add-btn" onclick="addToCart('Strawberry Shake', 109)">Add to Cart</button>
+       </div>
+     </div>
+
+
+<!---------------------------------------------Indian--------------------------------------->
+
+      <div class="category-card" onclick="toggleMenu('indianItems')">
+        <img src="images/Indian.jpeg" alt="Indian" />
+        <h3>Indian</h3>
+      </div>
+
+      <div class="category-items" id="indianItems">
+        <div class="menu-item">
+          <img src="images/Deluxe-Thali.jpeg" alt="Thali">
+          <h4>Deluxe Thali</h4>
+          <p>₹249</p>
+          <button class="add-btn" onclick="addToCart('Deluxe Thali', 249)">Add to Cart</button>
+       </div>
+       <div class="menu-item">
+          <img src="images/PavBhaji.jpeg" alt="Pav Bhaji">
+          <h4>Pav Bhaji</h4>
+          <p>₹119</p>
+          <button class="add-btn" onclick="addToCart('Pav Bhaji', 119)">Add to Cart</button>
+       </div>
+     </div>
+
+
+<!-------------------------------------Sweets-------------------------------------------->
+
+      <div class="category-card" onclick="toggleMenu('sweetsItems')">
+        <img src="images/Sweets.jpeg" alt="Sweets" />
+        <h3>Sweets</h3>
+      </div>
+    </div>
+
+    <div class="category-items" id="sweetsItems">
+      <div class="menu-item">
+        <img src="images/Gulab Jamun.jpeg" alt="Gulab Jamun">
+        <h4>Gulab Jamun</h4>
+        <p>₹80</p>
+        <button class="add-btn" onclick="addToCart('Gulab Jamun', 80)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/rasgulla.jpeg" alt="Rasgulla">
+        <h4>Rasgulla</h4>
+        <p>₹70</p>
+        <button class="add-btn" onclick="addToCart('Rasgulla', 70)">Add to Cart</button>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Category Row 3 -->
+    <div class="category-row">
+      <div class="category-card" onclick="toggleMenu('cakeItems')">
+        <img src="images/cake.jpeg" alt="Cake" />
+        <h3>Cake</h3>
+      </div>
+
+      <div class="category-items" id="cakeItems">
+        <div class="menu-item">
+          <img src="images/Chocolate Cake.jpeg" alt="Chocolate Cake">
+          <h4>Chocolate Cake</h4>
+          <p>₹299</p>
+          <button class="add-btn" onclick="addToCart('Chocolate Cake', 299)">Add to Cart</button>
+       </div>
+       <div class="menu-item">
+          <img src="images/Black forest cake.jpeg" alt="Black Forest Cake">
+          <h4>Black Forest Cake</h4>
+          <p>₹279</p>
+          <button class="add-btn" onclick="addToCart('Black Forest Cake', 279)">Add to Cart</button>
+       </div>
+      </div>
+
+
+<!-----------------------------------------Briyani------------------------>
+
+      <div class="category-card" onclick="toggleMenu('biryaniItems')">
+        <img src="images/Briyani.jpeg" alt="Biryani" />
+        <h3>Biryani</h3>
+      </div>
+
+      <div class="category-items" id="biryaniItems">
+         <div class="menu-item">
+           <img src="images/ChickenBiryani.jpeg" alt="Chicken Biryani">
+           <h4>Chicken Biryani</h4>
+           <p>₹189</p>
+           <button class="add-btn" onclick="addToCart('Chicken Biryani', 189)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+           <img src="images/VegBriyani.jpeg" alt="Veg Biryani">
+           <h4>Veg Biryani</h4>
+           <p>₹159</p>
+           <button class="add-btn" onclick="addToCart('Veg Biryani', 159)">Add to Cart</button>
+         </div>
+      </div>
+
+
+
+<!----------------------------------Drinks----------------------------------------------------->
+
+      <div class="category-card" onclick="toggleMenu('drinksItems')">
+        <img src="images/drinks.jpeg" alt="Drinks" />
+        <h3>Drinks</h3>
+      </div>
+    </div>
+
+    <div class="category-items" id="drinksItems">
+       <div class="menu-item">
+         <img src="images/mojito.jpeg" alt="Mojito">
+         <h4>Mint Mojito</h4>
+         <p>₹99</p>
+         <button class="add-btn" onclick="addToCart('Mint Mojito', 99)">Add to Cart</button>
+       </div>
+       <div class="menu-item">
+       <img src="images/Coke.jpeg" alt="Coke">
+         <h4>Cold Drink</h4>
+         <p>₹49</p>
+         <button class="add-btn" onclick="addToCart('Cold Drink', 49)">Add to Cart</button>
+       </div>
+    </div>
+
+
+
+
+
+
+    <!-------------------- Category Row 4 --------------------------------->
+    <div class="category-row">
+      <div class="category-card" onclick="toggleMenu('iceItems')">
+        <img src="images/Ice-cream.jpeg" alt="Ice Cream" />
+        <h3>Ice Cream</h3>
+      </div>
+
+      <div class="category-items" id="iceItems">
+         <div class="menu-item">
+           <img src="images/Vanilla Ice Cream.jpeg" alt="Vanilla">
+           <h4>Vanilla Ice Cream</h4>
+           <p>₹79</p>
+           <button class="add-btn" onclick="addToCart('Vanilla Ice Cream', 79)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+           <img src="images/Chocolate Chip Ice Cream.jpeg" alt="Choco Chip">
+           <h4>Choco Chip Ice Cream</h4>
+           <p>₹89</p>
+           <button class="add-btn" onclick="addToCart('Choco Chip Ice Cream', 89)">Add to Cart</button>
+         </div>
+     </div>
+
+
+
+<!-------------------------------------------------Lassi---------------------------------------------------------->
+
+
+    <div class="category-card" onclick="toggleMenu('lassiItems')">
+        <img src="images/Lassi.jpeg" alt="Lassi" />
+        <h3>Lassi</h3>
+      </div>
+      <div class="category-items" id="lassiItems">
+
+      <div class="menu-item">
+        <img src="images/sweet lassi.jpeg" alt="Sweet Lassi">
+        <h4>Sweet Lassi</h4>
+        <p>₹69</p>
+        <button class="add-btn" onclick="addToCart('Sweet Lassi', 69)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+       <img src="images/mangoLassi.jpeg" alt="Mango Lassi">
+       <h4>Mango Lassi</h4>
+       <p>₹79</p>
+       <button class="add-btn" onclick="addToCart('Mango Lassi', 79)">Add to Cart</button>
+      </div>
+    </div>
+
+
+<!----------------------------------------------Dosa------------------------------------------>
+
+      <div class="category-card" onclick="toggleMenu('dosaItems')">
+        <img src="images/Dosa.jpeg" alt="Dosa" />
+        <h3>Dosa</h3>
+      </div>
+      <div class="category-items" id="dosaItems">
+        <div class="menu-item">
+         <img src="images/masalaDosa.jpeg" alt="Masala Dosa">
+         <h4>Masala Dosa</h4>
+         <p>₹109</p>
+         <button class="add-btn" onclick="addToCart('Masala Dosa', 109)">Add to Cart</button>
+       </div>
+       <div class="menu-item">
+         <img src="images/plain Dosa.jpeg" alt="Plain Dosa">
+         <h4>Plain Dosa</h4>
+         <p>₹89</p>
+         <button class="add-btn" onclick="addToCart('Plain Dosa', 89)">Add to Cart</button>
+       </div>
+     </div>
+
+    </div>
+
+
+    
+
+  </section>
+
+  <script>
+  function toggleMenu(id) {
+    const allMenus = document.querySelectorAll('.category-items');
+    allMenus.forEach(menu => {
+      menu.style.display = (menu.id === id) ? 'flex' : 'none';
+    });
+  }
+
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existing = cart.find(item => item.name === name);
+    if (existing) existing.quantity += 1;
+    else cart.push({ name, price, quantity: 1 });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    alert("Account created successfully! 🎉");
+    window.location.href = "login.html";
+    return false;
+  }
+</script>
+
+</body>
+</html>

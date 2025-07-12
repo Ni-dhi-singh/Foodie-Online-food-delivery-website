@@ -1,0 +1,83 @@
+/* 🖤 Login Page */
+.login-body {
+  background-color: #111;
+  background-image: url("../images/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  width: 90%;
+  max-width: 400px;
+  color: #eee;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.login-box p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #ccc;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: #eee;
+}
+
+.login-form input:focus {
+  outline: 2px solid #777;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #777;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.signup-link a {
+  color: #fff;
+  text-decoration: underline;
+}
